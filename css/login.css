@@ -1,0 +1,31 @@
+body {
+  margin-top: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+.email-login {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 180px;
+}
+
+.input-panel {
+  float: left;
+  margin-left: 40%;
+}
+
+.warning-panel {
+  float: left;
+  margin-top: 7%;
+}
+
+.login-btn {
+  height: 20px;
+  width: 58px;
+  font-size: 16px;
+}
+
+.register-btn {
+  margin-left: 10px;
+}

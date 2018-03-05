@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SUPFile - Login</title>
+  <link href="css/login.css" rel="stylesheet" />
+  <script src="js/login.js"></script>
+</head>
+
+<body>
+  <div class="email-login">
+    <form action="login.php" method="post" name="login-form" onsubmit="return validateForm()">
+      <div class="input-panel">
+        <p class="login-logo">SUPFile - Email Login</p>
+        <p class="emailAddress-panel">
+          <input placeholder="Email Address" class="emailAddress-input" name="emailAddress" type="text">
+        </p>
+        <p class="password-panel">
+          <input placeholder="Password" class="password-input" name="password" type="password">
+        </p>
+        <div class="btn-panel">
+          <input type="submit" class="login-btn" value="Login">
+          <a class="register-btn" href="register.html">Register</a>
+        </div>
+      </div>
+    </form>
+
+    <div class="warning-panel">
+      <div style="height: 32px;">
+        <span id="email-warning" style="display: none; color: red; font-size: 12px; float: left; margin-top: 10px;">please input an email</span>
+      </div>
+      <div style="height: 32px;">
+        <span id="pwd-warning" style="display: none; color: red; font-size: 12px; float: left; margin-top: 20px;">can't be empty</span>
+      </div>
+    </div>
+  </div>
+  <div class="google-or-facebook-login">
+
+  </div>
+</body>
+
+</html>

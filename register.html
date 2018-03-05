@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SUPFile - Register</title>
+  <link href="css/register.css" rel="stylesheet" />
+  <script src="js/register.js"></script>
+  <!--<script>
+    //  Input name, passowrd & email address test
+    function validateForm() {
+      var name = document.forms["register-form"]["name"].value;
+      if (name == null || name == "") {
+        alert("Please input name!");
+        return false;
+      }
+      var password = document.forms["register-form"]["password"].value;
+      if (password == null || password == "") {
+        alert("Please input password!");
+        return false;
+      }
+      var email_address = document.forms["register-form"]["emailAddress"].value;
+      var atpos = email_address.indexOf("@");
+      var dotpos = email_address.lastIndexOf(".");
+      if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email_address.length) {
+        alert("Please input an email address!");
+        return false;
+      }
+    }
+  </script>-->
+</head>
+
+<body>
+  <div class="register-panel">
+    <p class="register-logo">SUPFile - Register</p>
+    <div class="table-panel">
+      <form action="register.php" method="get" name="register-form" onsubmit="return validateForm()">
+        <table class="register-table">
+          <tr>
+            <td>Name</td>
+            <td class="input">
+              <input type="text" name="name">
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td class="input">
+              <input type="text" name="password">
+            </td>
+          </tr>
+          <tr>
+            <td>Email Address</td>
+            <td class="input">
+              <input type="text" name="emailAddress">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input class="register-btn" type="submit" value="Register">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="warning-panel">
+      <div style="height: 30px;">
+        <span id="name-warning" style="display: none; color: red; font-size: 12px; float: left; margin-top: 5px;">can't be empty</span>
+      </div>
+      <div style="height: 30px;">
+        <span id="pwd-warning" style="display: none; color: red; font-size: 12px; float: left; margin-top: 5px;">can't be empty</span>
+      </div>
+      <div style="height: 30px;">
+        <span id="email-warning" style="display: none; color: red; font-size: 12px; float: left; margin-top: 5px;">This isn't an email</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

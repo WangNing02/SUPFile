@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SUPFile - Personal Page</title>
+  <link href="css/personal-SUPFile.css" rel="stylesheet" />
+  <script>
+    //  Edit title by user's email address when init page
+    window.onload = function () {
+      var xmlhttp;
+      if (window.XMLHttpRequest) {
+        //  IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        // IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById("emailAddressLogged").innerHTML = xmlhttp.responseText;
+          document.title = "SUPFile - " + xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET", "getEmailLogged.php", true);
+      xmlhttp.send();
+    };
+  </script>
+</head>
+
+<body>
+  <div class="top">
+    <table class="top-table">
+      <tr>
+        <td style="width: 70%; font-size: 22px;">
+          <span style="margin-left: -40%;">SUPFile</span>
+        </td>
+        <td style="width: 15%; font-size: 16px;">
+          <span id="emailAddressLogged"></span>
+        </td>
+        <td style="width: 15%; font-size: 16px;">
+          <a href="logout.php" style="color: #fff;">Logout</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="frame-main">
+    <div class="frame-tool-top">
+      <button>Create a folder</button>
+      <button style="margin-left: 15px;">Add a file</button>
+    </div>
+    <div class="frame-file" style="overflow: auto;">
+
+    </div>
+  </div>
+  <div class="copyright">
+    <span style="font-size: 16px; color: #fff;">
+      Copyright © 2018 SUPFile
+    </span>
+  </div>
+</body>
+
+</html>
